@@ -1,0 +1,19 @@
+*{
+  margin: 7;
+  padding: 0;
+}
+.dis{
+  display: flex;
+  height: 200px;
+  width: 200px;
+  background-color: antiquewhite;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.b{
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
