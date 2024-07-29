@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+#header1{
+    text-align: center;
+    color: rgb(17, 129, 221);
+    font-weight: bold;
+    padding-top: 40px; 
+}
+h2{
+    text-align: center;
+    color: rgb(17, 129, 221);
+    font-weight: bold;
+    padding-top: 40px; 
+}
+.cont{
+    height:75vh;
+    width: 100vw;
+    background-color: rgb(223, 246, 255);
+}
+.loginContainer{
+    max-width:300px;
+    max-height: 400px;
+    background-color: white;
+    text-align: center;
+    font-weight: 100;
+    position: relative;
+    left: 38vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: -1px -3px 28px rgb(165, 182, 189);
+}
+
+#text{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+#pass{
+    height: 30px;
+    width: 260px;
+    border: 1px solid rgb(235, 220, 220);
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+#useMail{
+    height: 30px;
+    width: 260px;
+    border: 1px solid rgb(235, 220, 220);
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+#btn{
+    height: 39px;
+    width: 275px;
+    border: 1px solid rgb(235, 220, 220);
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(17, 129, 221);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.innerdiv{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: rgb(17, 129, 221);;
+}
+
+.foot{
+    display: flex;
+    justify-content: end;
+    margin-right: 120px;
+    margin-top: 50px;
+}
+#deco{
+    color: chocolate;
+    
+}
+
+.fdiv{
+    display: flex;
+    justify-content: end;
+    margin-right: 120px;
+    margin-top: 10px;
+
+}
+#aa{
+    text-decoration: none;
+    margin-left: 5px;
+}
