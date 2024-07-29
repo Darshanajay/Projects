@@ -27,18 +27,21 @@ const CheckValid = (e) => {
   console.log(UpassValue);
 
   if (
-    UmailValue === "darshanajay60@gmail.com" ||
-    (UmailValue === 7411941292 && UpassValue === "darshan1234")
+    Umail.value === "darshanajay60@gmail.com" && Upass.value ==="darshan1234"
   ) {
     console.log("You are logged in successfully");
     let el = document.createElement("h2");
     el.textContent = "Your added to Darshan's group";
 
     subdiv.append(el);
+    
   }
+
+  
 
   Umail.value = "";
   Upass.value = "";
+
 };
 
 // const finalChick = (e) => {
