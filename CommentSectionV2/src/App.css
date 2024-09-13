@@ -1,0 +1,12 @@
+.sp {
+    margin: 0 5px;
+  }
+
+.reply {
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #4e4e4e;
+    font-weight: 600;
+    cursor: pointer;
+  }
