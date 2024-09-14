@@ -44,21 +44,20 @@ function App() {
 
   const { addNode, editNode, deleteNode } = useNode();
 
-  const handleAddNode = (folderId, item) => { 
-    const finalStr = addNode(commentsData , folderId , item)
+  const handleAddNode = (folderId, item) => {
+    const finalStr = addNode(commentsData, folderId, item);
     setCommentsData(finalStr);
-   }
+  };
 
-   const handleEditNode = () => { 
-    
-    }
-   const handleDeleteNode = (folderId) => { 
+  const handleEditNode = (folderId, value) => {
+    const finalStr = editNode(commentsData, folderId, value);
+    setCommentsData(finalStr);
+  };
+  const handleDeleteNode = (folderId) => {
     const finalStr = deleteNode(commentsData, folderId);
-    const temp = { ...finalStr};
+    const temp = { ...finalStr };
     setCommentsData(temp);
-    }
-
-    
+  };
 
   return (
     <>

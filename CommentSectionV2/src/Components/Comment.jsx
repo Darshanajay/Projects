@@ -10,25 +10,35 @@ const Comment = ({
   handleEditNode,
   handleDeleteNode,
 }) => {
-  const onAddComment = () => {
-    handleAddNode(comment.id, input);
-    setInput("");
-    setShowInput(false);
-  };
-
+  const inputRef = useRef(null);
   const [input, setInput] = useState("");
   const [editMode, setEditMode] = useState(false);
   const [showInput, setShowInput] = useState(false);
   const [expand, setExpand] = useState(false);
+  useEffect(() => {
+    inputRef?.current?.focus();
+  }, [editMode]);
+
+  const onAddComment = () => {
+    if (editMode) {
+      handleEditNode(comment.id, inputRef?.current?.innerText);
+    } else {
+      handleAddNode(comment.id, input);
+      setShowInput(false);
+      setInput("");
+    }
+
+    if (editMode) setEditMode(false);
+  };
 
   const handleNewComment = () => {
     setExpand(!expand);
     setShowInput(true);
   };
 
-  const handleDelete = () => { 
+  const handleDelete = () => {
     handleDeleteNode(comment.id);
-   }
+  };
 
   return (
     <div className=" ">
@@ -59,17 +69,25 @@ const Comment = ({
           <span
             contentEditable={editMode}
             suppressContentEditableWarning={editMode}
+            ref={inputRef}
           >
             {comment.name}
           </span>
           <div className=" flex">
             {editMode ? (
               <>
-                <Logic className="reply" type="SAVE" />
+                <Logic
+                  className="reply"
+                  type="SAVE"
+                  handleClick={onAddComment}
+                />
                 <Logic
                   className="reply"
                   type="CANCEL"
                   handleClick={() => {
+                    if (inputRef.current) {
+                      inputRef.current.innerText = comment.name;
+                    }
                     setEditMode(false);
                   }}
                 />
@@ -88,9 +106,13 @@ const Comment = ({
                     setEditMode(true);
                   }}
                 />
-                <Logic className="reply" type="DELETE" handleClick={handleDelete} />
+                <Logic
+                  className="reply"
+                  type="DELETE"
+                  handleClick={handleDelete}
+                />
               </>
-            ):null}
+            ) : null}
           </div>
         </div>
       )}
